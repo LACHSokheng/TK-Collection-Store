@@ -2,7 +2,10 @@
   <footer class="bg-gray-800 text-white py-8 mt-12">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="flex items-center space-x-3 mb-4 md:mb-0">
+        <div
+          class="flex items-center space-x-3 mb-4 md:mb-0 cursor-pointer"
+          @click="resetToAllProducts"
+        >
           <div class="h-8 w-8 overflow-hidden rounded-lg">
             <img
               src="/logo.jpg"
@@ -25,7 +28,7 @@
             <FacebookIcon class="h-5 w-5" />
           </a>
           <a
-            href="https://t.me/mesokheng"
+            href="https://t.me/CHHANSOKLAY"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:text-blue-300 transition-colors"
@@ -53,4 +56,15 @@
 import { PhoneIcon, MapPinIcon } from "lucide-vue-next";
 import FacebookIcon from "./icons/FacebookIcon.vue";
 import TelegramIcon from "./icons/TelegramIcon.vue";
+
+const emit = defineEmits(["reset-category"]);
+
+// Reset to All Products category and scroll to top
+const resetToAllProducts = () => {
+  // Emit event to reset category filter to "All"
+  emit("reset-category");
+
+  // Also scroll to top for better UX
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 </script>

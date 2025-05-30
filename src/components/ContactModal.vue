@@ -112,7 +112,7 @@ const formatKHR = (price) => {
 
 // Create Telegram link with product details
 const telegramLink = computed(() => {
-  if (!props.product) return "https://t.me/mesokheng";
+  if (!props.product) return "https://t.me/CHHANSOKLAY";
 
   const message = encodeURIComponent(
     `Hello, I'm interested in this product:\n\n` +
@@ -124,6 +124,6 @@ const telegramLink = computed(() => {
       `Please provide more information about it.`
   );
 
-  return `https://t.me/mesokheng?text=${message}`;
+  return `https://t.me/CHHANSOKLAY?text=${message}`;
 });
 </script>

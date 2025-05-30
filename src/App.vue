@@ -1,6 +1,9 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <AppHeader v-model:searchQuery="searchQuery" />
+    <AppHeader
+      v-model:searchQuery="searchQuery"
+      @reset-category="selectedCategory = null"
+    />
 
     <main class="container mx-auto px-4 py-6">
       <CategoryTabs
@@ -21,7 +24,7 @@
       @close="showContactModal = false"
     />
 
-    <AppFooter />
+    <AppFooter @reset-category="selectedCategory = null" />
   </div>
 </template>
 
