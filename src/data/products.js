@@ -5,7 +5,7 @@ export const products = [
     priceKHR: 40000,
     priceUSD: 10,
     category: "Clothing",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p1.jfif?height=300&width=300",
   },
   {
     id: "P002",
@@ -13,7 +13,7 @@ export const products = [
     priceKHR: 120000,
     priceUSD: 30,
     category: "Clothing",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p2.jpg?height=300&width=300",
   },
   {
     id: "P003",
@@ -21,7 +21,7 @@ export const products = [
     priceKHR: 60000,
     priceUSD: 15,
     category: "Accessories",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p3.jpg?height=300&width=300",
   },
   {
     id: "P004",
@@ -29,7 +29,7 @@ export const products = [
     priceKHR: 20000,
     priceUSD: 5,
     category: "Electronics",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p4.jpg?height=300&width=300",
   },
   {
     id: "P005",
@@ -37,7 +37,7 @@ export const products = [
     priceKHR: 200000,
     priceUSD: 50,
     category: "Jewelry",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p5.jpg?height=300&width=300",
   },
   {
     id: "P006",
@@ -45,7 +45,7 @@ export const products = [
     priceKHR: 160000,
     priceUSD: 40,
     category: "Electronics",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p6.jpg?height=300&width=300",
   },
   {
     id: "P007",
@@ -53,7 +53,7 @@ export const products = [
     priceKHR: 100000,
     priceUSD: 25,
     category: "Bags",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p7.jpg?height=300&width=300",
   },
   {
     id: "P008",
@@ -61,7 +61,7 @@ export const products = [
     priceKHR: 240000,
     priceUSD: 60,
     category: "Footwear",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p8.jpg?height=300&width=300",
   },
   {
     id: "P009",
@@ -69,7 +69,7 @@ export const products = [
     priceKHR: 80000,
     priceUSD: 20,
     category: "Accessories",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p9.jpg?height=300&width=300",
   },
   {
     id: "P010",
@@ -77,7 +77,7 @@ export const products = [
     priceKHR: 320000,
     priceUSD: 80,
     category: "Accessories",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p10.jpg?height=300&width=300",
   },
   {
     id: "P011",
@@ -85,7 +85,7 @@ export const products = [
     priceKHR: 60000,
     priceUSD: 15,
     category: "Electronics",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p11.jpg?height=300&width=300",
   },
   {
     id: "P012",
@@ -93,6 +93,6 @@ export const products = [
     priceKHR: 280000,
     priceUSD: 70,
     category: "Clothing",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/p12.jpg?height=300&width=300",
   },
 ];

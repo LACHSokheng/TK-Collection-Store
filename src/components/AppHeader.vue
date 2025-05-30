@@ -2,10 +2,12 @@
   <header class="sticky top-0 z-10 bg-white shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
-        <div
-          class="h-10 w-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
-        >
-          <span class="text-white font-bold text-lg">TK</span>
+        <div class="h-10 w-10 overflow-hidden rounded-lg">
+          <img
+            src="/logo.jpg"
+            alt="TKCollectionStore Logo"
+            class="w-full h-full object-cover"
+          />
         </div>
         <h1 class="text-xl md:text-2xl font-bold text-gray-800">
           TKCollectionStore

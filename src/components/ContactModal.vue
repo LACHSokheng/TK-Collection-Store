@@ -14,10 +14,33 @@
         </button>
       </div>
 
+      <!-- Product Details -->
+      <div v-if="product" class="mb-6 flex items-center space-x-4">
+        <div
+          class="w-24 h-24 rounded-md overflow-hidden bg-gray-100 flex-shrink-0"
+        >
+          <img
+            :src="product.image"
+            :alt="product.name"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-blue-600">
+            {{ product.name }}
+          </h3>
+          <p class="text-sm text-gray-500">ID: {{ product.id }}</p>
+          <div class="mt-1">
+            <p class="font-bold text-gray-800">${{ product.priceUSD }}</p>
+            <p class="text-sm text-gray-600">
+              {{ formatKHR(product.priceKHR) }}
+            </p>
+          </div>
+        </div>
+      </div>
+
       <p class="mb-4 text-gray-600">
-        Interested in
-        <span class="font-semibold text-blue-600">{{ product?.name }}</span
-        >? Contact us through any of these channels:
+        Interested in this product? Contact us through any of these channels:
       </p>
 
       <div class="space-y-3">
@@ -41,7 +64,7 @@
         />
 
         <ContactLink
-          href="https://t.me/mesokheng"
+          :href="telegramLink"
           icon="telegram"
           text="Telegram"
           bgColor="bg-sky-50"
@@ -65,10 +88,11 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import { XIcon } from "lucide-vue-next";
 import ContactLink from "./ContactLink.vue";
 
-defineProps({
+const props = defineProps({
   show: {
     type: Boolean,
     default: false,
@@ -80,4 +104,26 @@ defineProps({
 });
 
 defineEmits(["close"]);
+
+// Format KHR price with currency symbol
+const formatKHR = (price) => {
+  return new Intl.NumberFormat("en-US").format(price) + " ៛";
+};
+
+// Create Telegram link with product details
+const telegramLink = computed(() => {
+  if (!props.product) return "https://t.me/mesokheng";
+
+  const message = encodeURIComponent(
+    `Hello, I'm interested in this product:\n\n` +
+      `Name: ${props.product.name}\n` +
+      `ID: ${props.product.id}\n` +
+      `Price: $${props.product.priceUSD} / ${formatKHR(
+        props.product.priceKHR
+      )}\n\n` +
+      `Please provide more information about it.`
+  );
+
+  return `https://t.me/mesokheng?text=${message}`;
+});
 </script>

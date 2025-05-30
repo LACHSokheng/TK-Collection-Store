@@ -3,10 +3,12 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="flex items-center space-x-3 mb-4 md:mb-0">
-          <div
-            class="h-8 w-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
-          >
-            <span class="text-white font-bold text-sm">TK</span>
+          <div class="h-8 w-8 overflow-hidden rounded-lg">
+            <img
+              src="/logo.jpg"
+              alt="TKCollectionStore Logo"
+              class="w-full h-full object-cover"
+            />
           </div>
           <h2 class="text-lg font-bold">TKCollectionStore</h2>
         </div>
